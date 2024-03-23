@@ -37,8 +37,6 @@ def unpivot(data):
     return data
 
 
-# Run this app with `python app.py` and
-# visit http://127.0.0.1:8050/ in your web browser.
 def conditional_swap(row):
     # Age before beauty
     if (
@@ -54,7 +52,6 @@ def conditional_swap(row):
 
 def summarize_year(data):
     avg_gap = np.mean(data["age_difference"])
-    # breakpoint()
     pct_male = 100 * np.mean(
         (data["actor_1_gender"] == "male") & (data["actor_2_gender"] == "female")
     )
@@ -68,7 +65,6 @@ app = Dash(__name__)
 
 colors = {"background": "#111111", "text": "#7FDBFF"}
 
-# see https://plotly.com/python/px-arguments/ for more options
 age_raw = pd.read_csv("http://hollywoodagegap.com/movies.csv")
 
 # Average gap by year
